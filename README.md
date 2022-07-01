@@ -9,6 +9,7 @@ Table of Contents
 1. [Installing](#isntalling)
 2. [Uninstalling](#uninstalling)
 3. [Writing Mods](#writing-mods)
+4. [A Note About Antiviruses Flagging This](#a-note-about-antiviruses-flagging-this)
 
 Installing
 -----
@@ -28,3 +29,9 @@ Writing Mods
 -----
 **All mods MUST be 32-bit DLLs**. Changed is a 32-bit game so no 64-bit DLLs will work.
 As of now, there is no custom API written for Changed, I am working on that now.
+
+A Note About Antiviruses Flagging This
+-----
+This is a known issue with this program, and unfortunately, there is nothing I can do about it. I compile these programs using MinGW32 and have the  `--static` flag enabled so the program is portable. For some reason a lot of antivirus programs flag this, as described [here](https://stackoverflow.com/questions/62364507/compiled-c-executable-is-detected-as-a-virus-by-windows-defender), [here](https://stackoverflow.com/questions/64769420/antivirus-detecting-compiled-c-files-as-trojans), and [here](https://security.stackexchange.com/questions/229576/program-compiled-with-mingw32-is-reported-as-infected). Not only is this an issue, but because the program is also a DLL injector, this will trigger more antiviruses.
+
+If you want to see the VirusTotal result for version 1.0.0 of ChangedLoader.exe, you can view it [here](https://www.virustotal.com/gui/file/d30721fcb7dceb38a6c2da7548571d495dec2421937b8277cdcaa0be2d52bdfa).
