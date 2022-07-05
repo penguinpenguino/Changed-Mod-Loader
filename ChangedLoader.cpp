@@ -13,8 +13,8 @@ bool inject(std::string DLLPath, HANDLE target) {
     WriteProcessMemory(target, mem, (LPVOID)dll, strlen(dll) + 1, 0);
     HANDLE thread = CreateRemoteThread(target, NULL, 0, (LPTHREAD_START_ROUTINE)GetProcAddress(LoadLibrary("kernel32"), "LoadLibraryA"), mem, 0, NULL);
     if (thread == NULL) { return false; }
-	WaitForSingleObject(thread, INFINITE);
-	CloseHandle(thread);
+    WaitForSingleObject(thread, INFINITE);
+    CloseHandle(thread);
     VirtualFreeEx(target, mem, 0, MEM_RELEASE);
     return true;
 }
@@ -37,14 +37,14 @@ HANDLE GetHandle() {
 }
 
 int main(int argc, char** argv) {
-	AllocConsole();
+    AllocConsole();
     freopen("CONOUT$", "w", stdout);
-	STARTUPINFO si;
-	PROCESS_INFORMATION pi;
-	ZeroMemory(&si, sizeof(si));
-	si.cb = sizeof(si);
-	ZeroMemory(&pi, sizeof(pi));
-	CreateProcess("Game.exe", NULL, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
+    STARTUPINFO si;
+    PROCESS_INFORMATION pi;
+    ZeroMemory(&si, sizeof(si));
+    si.cb = sizeof(si);
+    ZeroMemory(&pi, sizeof(pi));
+    CreateProcess("Game.exe", NULL, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
     WaitForSingleObject(pi.hProcess, INFINITE);
     std::string ModPath = ".\\mods\\";
     HANDLE target = GetHandle();
@@ -73,7 +73,7 @@ int main(int argc, char** argv) {
         return 1;
     }
     std::cout << "\nLoaded " << s << " mods" << std::endl;
-	if (argc > 1 && strcmp(argv[1], "--wait") == 0) { WaitForSingleObject(target, INFINITE); }
+    if (argc > 1 && strcmp(argv[1], "--wait") == 0) { WaitForSingleObject(target, INFINITE); }
     CloseHandle(pi.hProcess);
     CloseHandle(pi.hThread);
     CloseHandle(target);
