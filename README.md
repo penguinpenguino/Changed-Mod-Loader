@@ -13,11 +13,9 @@ Table of Contents
 
 Installing
 -----
-1. Install [7-zip](https://www.7-zip.org/).
-2. Download the [latest release](https://github.com/penguinpenguino/Changed-Mod-Loader/releases/latest).
-3. Open **ChangedLoader.7z** and extract **ChangedLoader.exe** into your game directory.
-4. Done! To play Changed with mods run **ChangedLoader.exe**, to play without mods run **Game.exe**.
-5. Optional: Extract the **mods** folder from ChangedLoader.7z into your game directory.
+1. Download the [latest release](https://github.com/penguinpenguino/Changed-Mod-Loader/releases/latest).
+2. Move **ChangedLoader.exe** into your game directory.
+3. Done! To play Changed with mods run **ChangedLoader.exe**, to play without mods run **Game.exe**.
 
 To install other mods, create a folder called **mods** in your games directory, then drag any mod files into it.
 
