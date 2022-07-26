@@ -32,4 +32,4 @@ A Note About Antiviruses Flagging This
 -----
 This is a known issue with this program, and unfortunately, there is nothing I can do about it. I compile these programs using MinGW32 and have the  `--static` flag enabled so the program is portable. For some reason a lot of antivirus programs flag this, as described [here](https://stackoverflow.com/questions/62364507/compiled-c-executable-is-detected-as-a-virus-by-windows-defender), [here](https://stackoverflow.com/questions/64769420/antivirus-detecting-compiled-c-files-as-trojans), and [here](https://security.stackexchange.com/questions/229576/program-compiled-with-mingw32-is-reported-as-infected). Not only is this an issue, but because the program is a DLL injector, it will trigger more antiviruses.
 
-If you want to see the VirusTotal result for version 1.0.0 of ChangedLoader.exe, you can view it [here](https://www.virustotal.com/gui/file/d30721fcb7dceb38a6c2da7548571d495dec2421937b8277cdcaa0be2d52bdfa).
+If you want to see the VirusTotal result for version 1.0.1 of ChangedLoader.exe, you can view it [here](https://www.virustotal.com/gui/file/500c4e2af057aeca829751ceebf54d96ae4cdc842f1daef91f86da03978a9293).
